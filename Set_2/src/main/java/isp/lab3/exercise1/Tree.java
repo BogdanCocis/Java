@@ -3,6 +3,9 @@ package isp.lab3.exercise1;
 public class Tree {
     private int heightOfTree;
 
+    public Tree() {
+        this.heightOfTree = 15;
+    }
 
     public Tree(int heightOfTree) {
         this.heightOfTree = heightOfTree;

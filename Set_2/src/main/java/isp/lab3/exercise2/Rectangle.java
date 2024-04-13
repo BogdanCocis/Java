@@ -24,7 +24,7 @@ public class Rectangle {
     }
 
     public int getPerimeter(){
-        return (length+width);
+        return (2*(length+width));
     }
     public int getArea(){
         return (length*width);

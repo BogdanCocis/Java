@@ -2,20 +2,24 @@ package isp.lab3.exercise3;
 
 public class Exercise3 {
     public static void main(String[] args) {
-        // Vehicle 1: Dacia Logan
-        Vehicule vehiculeDacia = new Vehicule();
-        vehiculeDacia.setModel("Logan");
-        vehiculeDacia.setType("Facelift");
-        vehiculeDacia.setSpeed(130);
-        vehiculeDacia.setFuelType('B');
+        // Vehicul 1: Dacia Logan
+        Vehicule vehiculeDacia = new Vehicule("Logan", "Facelift", 130, 'B');
         System.out.println(vehiculeDacia);
 
-        // Vehicule Mercedez Benz:
-        Vehicule vehiculeMercedez = new Vehicule();
-        vehiculeMercedez.setModel("Mercedez");
-        vehiculeMercedez.setType("S-Class");
-        vehiculeMercedez.setSpeed(240);
-        vehiculeMercedez.setFuelType('B');
-        System.out.println(vehiculeMercedez);
+        // Vehicul 2: Mercedes-Benz S-Class
+        Vehicule vehiculeMercedes = new Vehicule("Mercedes", "S-Class", 240, 'B');
+        System.out.println(vehiculeMercedes);
+
+        // Compare vehicule
+        if (vehiculeDacia.equals(vehiculeMercedes))
+            System.out.println("Dacia not eqals Mercedes :)");
+        else
+            System.out.println("The car are not eqals");
+
+       if(Vehicule.displayNumberOfVehicles() == 0)
+           System.out.println("No cars");
+       else if (Vehicule.displayNumberOfVehicles() == 1)
+           System.out.println("Only one car");
+
     }
 }
